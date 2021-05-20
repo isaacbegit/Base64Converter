@@ -70,10 +70,20 @@ namespace Base64Converter
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var bytes = File.ReadAllBytes(filePath);
-            var base64String = Convert.ToBase64String(bytes);      
-            Clipboard.SetText(base64String);
-            MessageBox.Show("Done ");
+            try
+            {
+
+                if (File.Exists(filePath))
+                {
+                    var bytes = File.ReadAllBytes(filePath);
+                    var base64String = Convert.ToBase64String(bytes);
+                    Clipboard.SetText(base64String);
+                    MessageBox.Show("Done ");
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private static void EncodeWithConvertToBase64(byte[] inputBytes, string targetFile)

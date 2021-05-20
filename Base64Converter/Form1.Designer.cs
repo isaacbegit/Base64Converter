@@ -36,7 +36,6 @@ namespace Base64Converter
             this.txt_outputFile = new System.Windows.Forms.TextBox();
             this.txt_file_ext = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -102,7 +101,7 @@ namespace Base64Converter
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(486, 13);
+            this.button3.Location = new System.Drawing.Point(579, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 35);
             this.button3.TabIndex = 14;
@@ -110,19 +109,9 @@ namespace Base64Converter
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(580, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 35);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Copy to clipboard";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(392, 14);
+            this.button1.Location = new System.Drawing.Point(486, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 35);
             this.button1.TabIndex = 11;
@@ -135,8 +124,8 @@ namespace Base64Converter
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 11F);
             this.textBox1.Location = new System.Drawing.Point(67, 19);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(321, 25);
-            this.textBox1.TabIndex = 10;
+            this.textBox1.Size = new System.Drawing.Size(413, 25);
+            this.textBox1.TabIndex = 1;
             // 
             // label3
             // 
@@ -155,7 +144,7 @@ namespace Base64Converter
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.txt_file_ext);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(8, 77);
+            this.groupBox1.Location = new System.Drawing.Point(8, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(678, 92);
             this.groupBox1.TabIndex = 21;
@@ -166,19 +155,18 @@ namespace Base64Converter
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Location = new System.Drawing.Point(8, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(678, 72);
-            this.groupBox2.TabIndex = 22;
+            this.groupBox2.Size = new System.Drawing.Size(678, 52);
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 188);
+            this.ClientSize = new System.Drawing.Size(691, 154);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -202,7 +190,6 @@ namespace Base64Converter
         private System.Windows.Forms.TextBox txt_outputFile;
         private System.Windows.Forms.TextBox txt_file_ext;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
