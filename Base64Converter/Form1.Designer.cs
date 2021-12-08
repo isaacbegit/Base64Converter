@@ -38,6 +38,8 @@ namespace Base64Converter
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lb_info = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -102,7 +104,7 @@ namespace Base64Converter
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(651, 115);
+            this.tabControl1.Size = new System.Drawing.Size(651, 145);
             this.tabControl1.TabIndex = 22;
             // 
             // tabPage1
@@ -114,38 +116,61 @@ namespace Base64Converter
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(643, 86);
+            this.tabPage1.Size = new System.Drawing.Size(643, 116);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Send File";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lb_info);
             this.tabPage2.Controls.Add(this.btn_convert_tofile);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(643, 86);
+            this.tabPage2.Size = new System.Drawing.Size(643, 116);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Receive File";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.progressBar1.Location = new System.Drawing.Point(0, 145);
+            this.progressBar1.MarqueeAnimationSpeed = 5;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(651, 10);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar1.TabIndex = 20;
+            this.progressBar1.Visible = false;
+            // 
+            // lb_info
+            // 
+            this.lb_info.AutoSize = true;
+            this.lb_info.Location = new System.Drawing.Point(304, 74);
+            this.lb_info.Name = "lb_info";
+            this.lb_info.Size = new System.Drawing.Size(0, 17);
+            this.lb_info.TabIndex = 21;
             // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 115);
+            this.ClientSize = new System.Drawing.Size(651, 155);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.progressBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "File Conversion";
+            this.Load += new System.EventHandler(this.Mainform_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -159,6 +184,8 @@ namespace Base64Converter
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label lb_info;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
